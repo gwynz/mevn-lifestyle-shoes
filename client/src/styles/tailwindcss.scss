@@ -12,9 +12,37 @@ body {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: white;
 }
 
 .bg-gradient-green {
     background: linear-gradient(135deg, #00d36a, #00c1ff);
+}
+
+.card-item {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -1rem;
+        left: 0;
+        margin: -1rem;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: -1;
+        background: #1f2229;
+        -webkit-clip-path: inset(1rem 0 1rem 1rem round 10px);
+        clip-path: inset(1rem 0 1rem 1rem round 10px);
+        contain: strict;
+        transition: -webkit-clip-path 0.3s ease 0.1s;
+        transition: clip-path 0.3s ease 0.1s;
+        transition: clip-path 0.3s ease 0.1s, -webkit-clip-path 0.3s ease 0.1s;
+    }
+
+    &:hover::after {
+        clip-path: inset(0 round 10px);
+    }
 }
