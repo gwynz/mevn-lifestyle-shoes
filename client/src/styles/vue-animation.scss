@@ -1,0 +1,9 @@
+.right-to-enter-active,
+.right-to-leave-active {
+    transition: all .4s;
+}
+
+.right-to-enter,
+.right-to-leave-to {
+    right: -100%;
+}
