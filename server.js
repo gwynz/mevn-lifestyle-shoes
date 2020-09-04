@@ -4,7 +4,7 @@ const server = express();
 const cors = require('cors');
 const path = require('path');
 const bodyParser = require("body-parser");
-const serveStatic = require('serve-static');
+//const serveStatic = require('serve-static');
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
@@ -20,16 +20,11 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.use(cors());
-server.use(serveStatic(__dirname + '/client/dist'));
+//server.use(serveStatic(__dirname + '/client/dist'));
 
-const router_news = require('./news');
-server.use('/news', router_news);
+const r_user = require('./router/user');
+server.use('/user', r_user);
 
-const router_content = require('./contents');
-server.use('/contents', router_content);
-
-const router_creator = require('./creators');
-server.use('/creators', router_creator);
 
 
 

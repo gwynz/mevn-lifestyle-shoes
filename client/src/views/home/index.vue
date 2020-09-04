@@ -4,19 +4,19 @@
       <header class="bg-gradient-green text-center text-white text-2xl bold">LIFESTYLE SHOES</header>
       <nav class="flex justify-center p-4 bg-black-400 relative">
         <div
-          class="px-4 py-2 mx-2 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+          class="px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
         >Nam</div>
         <div
-          class="px-4 py-2 mx-2 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+          class="px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
         >Nu</div>
         <div
-          class="px-4 py-2 mx-2 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+          class="px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
         >The thao</div>
         <div
-          class="px-4 py-2 mx-2 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+          class="px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
         >Cac nhan hieu</div>
         <div
-          class="px-4 py-2 mx-2 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+          class="px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
         >Phu kien</div>
         <div class="mr-20 absolute flex right-0">
           <div class="mr-4 flex justify-center items-center cursor-pointer">

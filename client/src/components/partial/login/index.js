@@ -1,7 +1,12 @@
 export default {
     data: () => {
         return {
-            isShow: false
+            isShow: false,
+            userModel: {
+                name: '',
+                email: '',
+                password: ''
+            }
         }
     },
     methods: {
