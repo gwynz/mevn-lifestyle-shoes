@@ -55,7 +55,6 @@ router.post('/login', async (req, res) => {
         var oldUser = User.findOne({
             email: user.email
         }).then(u => {
-            console.log(u)
             if (!u) {
                 res.status(400).json({
                     message: 'User not exist'
