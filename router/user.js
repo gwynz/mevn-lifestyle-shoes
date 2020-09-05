@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../model/user');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 router.get('/', async (req, res) => {
     try {
@@ -14,15 +15,72 @@ router.get('/', async (req, res) => {
         });
     }
 });
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
     try {
         const user = new User({
             name: req.body.name,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10)
         });
+        User.findOne({
+            email: user.email
+        }).then(user => {
+            if (user) {
+                res.status(400).json({
+                    message: 'Email already exists'
+                });
+            }
+        })
         const newUser = await user.save();
-        res.status(201).json(newUser);
+        jwt.sign({
+            userId: newUser._id
+        }, 'secretkey', function (err, token) {
+            res.status(201).json({
+                token: token,
+                user: newUser
+            });
+        });
+    } catch (err) {
+        res.status(400).json({
+            message: err.message
+        });
+    }
+});
+router.post('/login', async (req, res) => {
+    try {
+        const user = new User({
+            email: req.body.email,
+            password: req.body.password
+        });
+        var oldUser = User.findOne({
+            email: user.email
+        }).then(u => {
+            console.log(u)
+            if (!u) {
+                res.status(400).json({
+                    message: 'User not exist'
+                });
+            }
+            if (!bcrypt.compareSync(user.password, u.password)) {
+                res.status(400).json({
+                    message: 'Incorrect password'
+                });
+            }
+            // all ok => create token and send it to frontend
+            jwt.sign({
+                userId: u._id
+            }, 'secretkey', function (err, token) {
+                res.status(201).json({
+                    token: token,
+                    user: u
+                });
+            });
+        })
+        if (!oldUser) {
+            res.status(400).json({
+                message: 'Cannot find user'
+            });
+        }
     } catch (err) {
         res.status(400).json({
             message: err.message

@@ -68,9 +68,11 @@
                 <button
                   class="shadow bg-gradient-green hover:bg-green-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                   type="button"
+                  @click="register"
                 >Sign Up</button>
               </div>
             </div>
+            <div class="m-4 mx-auto md:flex md:items-center mb-6 text-red-600">{{error}}</div>
           </form>
         </div>
       </div>

@@ -62,7 +62,7 @@
             </svg>
           </div>
           <div
-            class="px-4 py-2 mr-4 rounded-md bg-green-500 cursor-pointer hover:opacity-75"
+            class="px-4 py-2 mr-4 rounded-md flex items-center bg-green-500 cursor-pointer hover:opacity-75"
             @click="$refs.modalRegister.setShowModal(true)"
           >Sign Up</div>
           <div
