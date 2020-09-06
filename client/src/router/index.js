@@ -4,6 +4,7 @@ import product from '@/views/product/index.vue'
 import Detail from '@/views/detail-product/index.vue'
 import LandingPage from '@/views/landing-page/index.vue'
 import checkoutPage from '@/views/checkout-page/index.vue'
+import admin from '@/views/admin/index.vue'
 import store from '@/store/app.js'
 Vue.use(Router)
 var router = new Router({
@@ -27,6 +28,14 @@ var router = new Router({
       path: '/checkout',
       name: 'checkout',
       component: checkoutPage,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: admin,
       meta: {
         requiresAuth: true
       }
