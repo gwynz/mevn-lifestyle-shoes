@@ -1,5 +1,5 @@
 <template>
-  <div class="px-16">
+  <div>
     <div class="text-yellow-500 py-1">Explore</div>
     <ul class="pl-4">
       <li class="my-1">Picks</li>

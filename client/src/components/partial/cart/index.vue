@@ -4,8 +4,8 @@
       <div @click.stop class="absolute inset-0 left-auto w-3/12 bg-black-900 z-40 opacity-100 p-8">
         <div class="px-4 py-24">
           <div class="flex items-center justify-between">
-            <h3 class="text-2xl font-medium">Your cart</h3>
-            <button @click="cartOpen = !cartOpen" class="focus:outline-none">
+            <h3 class="text-xl uppercase font-bold">Your cart</h3>
+            <button @click="isShow = false" class="focus:outline-none">
               <svg
                 class="h-5 w-5"
                 fill="none"
@@ -146,18 +146,10 @@
             </div>
             <span class>20$</span>
           </div>
-          <div class="mt-8">
-            <form class="flex items-center justify-center">
-              <input class="form-input w-48" type="text" placeholder="Add promocode" />
-              <button
-                class="ml-3 flex items-center px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
-              >
-                <span>Apply</span>
-              </button>
-            </form>
-          </div>
-          <a
-            class="flex items-center justify-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+
+          <router-link
+            to="/checkout"
+            class="flex items-center justify-center mt-4 px-3 py-2 bg-green-550 text-white text-sm uppercase font-medium rounded hover:opacity-75 cursor-pointer focus:outline-none"
           >
             <span>Chechout</span>
             <svg
@@ -171,7 +163,7 @@
             >
               <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

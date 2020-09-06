@@ -3,7 +3,7 @@
     <header class="bg-gradient-green text-center text-white text-2xl bold">
       <router-link to="/">LIFESTYLE SHOES</router-link>
     </header>
-    <nav class="flex justify-center p-4 bg-black-400 relative">
+    <nav class="hidden sm:flex justify-center p-4 bg-black-400 relative">
       <div
         class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
       >
@@ -74,7 +74,7 @@
           <path d="M3.5 0H0l1.75 2.5L3.5 0z" />
         </svg>
       </div>
-      <div class="mr-20 absolute flex right-0">
+      <div class="mr-20 absolute right-0 hidden xl:flex">
         <div
           class="px-4 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center"
           @click="$refs.modalRegister.setShowModal(true)"
@@ -83,7 +83,10 @@
           class="px-4 mx-2 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center"
           @click="$refs.modalLogin.setShowModal(true)"
         >Sign In</div>
-        <div class="p-1 bg-gradient-mul text-center rounded-sm cursor-pointer hover:opacity-75">
+        <div
+          class="p-1 bg-gradient-mul text-center rounded-sm cursor-pointer hover:opacity-75"
+          @click="$refs.modalCart.setShowModal(true)"
+        >
           <span class="bg-black-900 p-2 rounded-sm flex justify-center items-center px-4">
             <svg
               fill="none"
@@ -103,6 +106,7 @@
         </div>
       </div>
     </nav>
+    <cartModal ref="modalCart" />
     <logInModal ref="modalLogin" />
     <registerModal ref="modalRegister" />
   </header>

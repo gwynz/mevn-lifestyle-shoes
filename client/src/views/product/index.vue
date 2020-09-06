@@ -1,10 +1,10 @@
 <template>
   <div>
     <header-bar />
-    <section class="pt-20">
-      <sideBar class="px-10 py-16 fixed w-2/12" />
-      <section class="pl-56 pb-2 pt-16">
-        <div class="ml-24 py-4 relative max-w-lg">
+    <section class="mt-16 sm:mt-32">
+      <sideBar class="hidden sm:block px-5 xl:px-16 py-10 fixed w-32 xl:w-64" />
+      <section class="px-4 sm:pl-32 xl:pl-64 pb-2">
+        <div class="py-8 relative max-w-lg">
           <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
             <svg class="h-5 w-5" viewBox="0 0 24 24">
               <path
@@ -23,12 +23,12 @@
           />
         </div>
       </section>
-      <section class="pl-56 py-4">
-        <content class="px-24 mx-auto grid grid-cols-5 gap-10">
+      <section class="px-8 sm:pl-32 xl:pl-64 py-4 p-8">
+        <content class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10">
           <router-link
             to="/detail"
             class="w-full card-item cursor-pointer"
-            v-for="i in [1,2,3,4,5]"
+            v-for="i in [1,2,3,4,5,6]"
             :key="i"
           >
             <div
@@ -36,7 +36,7 @@
               style="background-image: url(&quot;https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80&quot;);"
             >
               <button
-                class="p-2 rounded-full bg-blue-600 text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 focus:outline-none"
               >
                 <svg
                   fill="none"
@@ -57,7 +57,7 @@
               <div class="font-bold text-xl cursor-pointer">The Coldest Sunset</div>
             </div>
             <div class="p-2 text-red-700 text-xl">120$</div>
-            <div class="p-2 pb-2">
+            <div class="p-2 pb-2 hidden lg:block">
               <span
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
               >#photography</span>
@@ -66,17 +66,40 @@
               >#travel</span>
             </div>
           </router-link>
-          <div class="w-full card-item cursor-pointer" v-for="i in [6,7,8,9,10]" :key="i">
-            <img
-              class="w-full"
-              src="https://img.ssensemedia.com/image/upload/b_white/c_scale,h_820/f_auto,dpr_1.0/202799F127006_1.jpg"
-              alt="Sunset in the mountains"
-            />
+
+          <router-link
+            to="/detail"
+            class="w-full card-item cursor-pointer"
+            v-for="i in [1,2,3,4,5,6]"
+            :key="i"
+          >
+            <div
+              class="flex items-end justify-end h-40 w-full bg-cover"
+              style="background-image: url(https://img.ssensemedia.com/image/upload/b_white/c_scale,h_820/f_auto,dpr_1.0/202799F127006_1.jpg);"
+            >
+              <button
+                class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 focus:outline-none"
+              >
+                <svg
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="h-5 w-5"
+                >
+                  <path
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </button>
+            </div>
             <div class="p-2 pt-4">
               <div class="font-bold text-xl cursor-pointer">The Coldest Sunset</div>
             </div>
             <div class="p-2 text-red-700 text-xl">120$</div>
-            <div class="p-2 pb-2">
+            <div class="p-2 pb-2 hidden lg:block">
               <span
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
               >#photography</span>
@@ -84,28 +107,12 @@
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
               >#travel</span>
             </div>
-          </div>
+          </router-link>
         </content>
       </section>
     </section>
 
-    <footer class="bg-black-900 h-64 mt-16">
-      <div class="container mx-auto flex justify-between align-middle h-full text-black-100">
-        <nav class="flex items-center">
-          <h4 class="bold mx-2">Gwynz</h4>
-          <a class="mx-2" href="#">About</a>
-          <a class="mx-2" href="#">Blog</a>
-          <a class="mx-2" href="#">Podcast</a>
-          <a class="mx-2" href="#">Advertising</a>
-          <a class="mx-2" href="#">Docs</a>
-          <a class="mx-2" href="#">Support</a>
-          <a class="mx-2" href="#">Shop</a>
-        </nav>
-        <div class="flex items-center">
-          <p>©2020 Gwz</p>
-        </div>
-      </div>
-    </footer>
+    <footer-master />
   </div>
 </template>
 <script src="./index.js"></script>

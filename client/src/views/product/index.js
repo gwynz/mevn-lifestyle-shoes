@@ -1,11 +1,13 @@
 import sideBar from '../../components/partial/sidebar/index.vue'
 import search from '../../components/partial/search/index.vue'
 import headerBar from '../../components/partial/header/index.vue'
+import footerMaster from '../../components/partial/footer/index.vue'
 export default {
     components: {
         sideBar,
         search,
-        headerBar
+        headerBar,
+        footerMaster
     },
     computed: {
         isLoggedIn: function () {

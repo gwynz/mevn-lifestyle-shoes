@@ -10,13 +10,13 @@ var router = new Router({
   mode: 'history',
   routes: [{
       path: '/',
-      name: 'product',
-      component: product,
-    },
-    {
-      path: '/land',
       name: 'LandingPage',
       component: LandingPage,
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: product,
     },
     {
       path: '/detail',
