@@ -5,7 +5,7 @@
     </header>
     <nav class="hidden sm:flex justify-center p-4 bg-black-400 relative">
       <div
-        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900 transition-all duration-300"
       >
         Nam
         <svg
@@ -19,7 +19,7 @@
         </svg>
       </div>
       <div
-        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900 transition-all duration-300"
       >
         Nu
         <svg
@@ -47,7 +47,7 @@
         </svg>
       </div>
       <div
-        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900 transition-all duration-300"
       >
         Cac nhan hieu
         <svg
@@ -61,7 +61,7 @@
         </svg>
       </div>
       <div
-        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900"
+        class="flex items-center px-4 py-2 mx-1 rounded-md bg-black-500 shadow-xs cursor-pointer hover:bg-black-900 transition-all duration-300"
       >
         Phu kien
         <svg
@@ -76,18 +76,20 @@
       </div>
       <div class="mr-20 absolute right-0 hidden xl:flex">
         <div
-          class="px-4 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center"
+          class="px-4 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center transition-all duration-300"
           @click="$refs.modalRegister.setShowModal(true)"
         >Sign Up</div>
         <div
-          class="px-4 mx-2 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center"
+          class="px-4 mx-2 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center transition-all duration-300"
           @click="$refs.modalLogin.setShowModal(true)"
         >Sign In</div>
         <div
-          class="p-1 bg-gradient-mul text-center rounded-sm cursor-pointer hover:opacity-75"
+          class="p-1 bg-gradient-mul text-center rounded-sm cursor-pointer"
           @click="$refs.modalCart.setShowModal(true)"
         >
-          <span class="bg-black-900 p-2 rounded-sm flex justify-center items-center px-4">
+          <span
+            class="bg-black-900 hover:opacity-75 p-2 rounded-sm flex justify-center items-center px-4 transition-all duration-300"
+          >
             <svg
               fill="none"
               stroke-linecap="round"
