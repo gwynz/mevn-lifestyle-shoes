@@ -3,7 +3,9 @@
     <headerBar />
     <div class="relative max-w-lg mx-auto mt-32">
       <router-link to="/product">
-        <span class="absolute inset-y-0 left-0 pl-3 flex items-center cursor-pointer text-white">
+        <span
+          class="absolute inset-y-0 left-0 pl-3 flex items-center cursor-pointer text-white bg-black-500"
+        >
           <svg class="h-5 w-5" viewBox="0 0 24 24">
             <path
               d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
