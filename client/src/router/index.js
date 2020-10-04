@@ -5,12 +5,17 @@ import Detail from '@/views/detail-product/index.vue'
 import LandingPage from '@/views/landing-page/index.vue'
 import checkoutPage from '@/views/checkout-page/index.vue'
 import admin from '@/views/admin/index.vue'
-import store from '@/store/app.js'
+import STORE from '@/store/app.js'
 Vue.use(Router)
 var router = new Router({
   mode: 'history',
   routes: [{
       path: '/',
+      name: 'LandingPage',
+      component: LandingPage,
+    },
+    {
+      path: '/login',
       name: 'LandingPage',
       component: LandingPage,
     },
@@ -44,13 +49,35 @@ var router = new Router({
 })
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
-    if (store.getters.isLoggedIn) {
+    if (STORE.getters.isLoggedIn) {
       next()
       return
     }
-    next('/')
+    next({
+      path: '/login',
+      query: {
+        redirect: to.fullPath
+      }
+    })
   } else {
     next()
   }
 })
+router.onReady(() => {
+  STORE.subscribe((mutations, state) => {
+    switch (mutations.type) {
+      case 'auth_success': {
+        let redirect = router.history.current.query && router.history.current.query.redirect;
+        console.log('sss', redirect)
+        if (redirect && redirect != '/login') {
+          router.push({
+            path: redirect
+          });
+        }
+      }
+    }
+  })
+  STORE.dispatch('getUserByToken');
+})
+
 export default router

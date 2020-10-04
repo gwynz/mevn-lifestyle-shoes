@@ -12,12 +12,8 @@ export default {
         }
     },
     methods: {
-        setShowModal(isShow) {
-            this.isShow = isShow;
-        },
-        submit() {
-
-
+        setShowModal(show) {
+            this.isShow = show;
         },
         register: function () {
             var params = {
@@ -27,12 +23,12 @@ export default {
             }
             this.$store
                 .dispatch("register", params)
-                .then(() => {
-                    setShowModal(false)
-                })
-                .catch(err => {
-                    console.log(err.response)
-                    this.error = err.response.data.message
+                .then((res) => {
+                    this.setShowModal(false)
+                }).catch((err) => {
+                    console.log('error')
+                    if (err.response)
+                        this.error = err.response.data.message
                 });
         }
     }

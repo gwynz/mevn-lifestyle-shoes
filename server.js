@@ -8,7 +8,8 @@ const bodyParser = require("body-parser");
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 const db = mongoose.connection;
 db.on('error', (error) => console.error('error', error));
@@ -24,7 +25,6 @@ server.use(cors());
 
 const r_user = require('./router/user');
 server.use('/user', r_user);
-
 
 
 

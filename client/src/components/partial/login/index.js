@@ -7,14 +7,14 @@ export default {
                 email: '',
                 password: ''
             },
-            error: ''
+            error: '',
+            firstAccess: true
         }
     },
     methods: {
-        setShowModal(isShow) {
-            this.isShow = isShow;
+        setShowModal(show) {
+            this.isShow = show;
         },
-        submit() {},
         login: function () {
             var params = {
                 email: this.userModel.email,
@@ -27,7 +27,9 @@ export default {
                 })
                 .catch(err => {
                     console.log(err.response)
-                    this.error = err.response.data.message
+                    if (err.response) {
+                        this.error = err.response.data.message
+                    }
                 });
         }
     }

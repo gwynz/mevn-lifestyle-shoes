@@ -3,11 +3,12 @@ import Vuex from 'vuex'
 import enums from '../enum/index'
 import userService from '@/services/userService'
 import axios from 'axios'
+import decode from 'jwt-decode'
 Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         token: window.localStorage.getItem('token') || null,
-        currentUser: {}
+        currentUser: null
     },
     mutations: {
         setLayout(state, value) {
@@ -18,13 +19,21 @@ const store = new Vuex.Store({
             token,
             user
         }) {
+
             state.token = token
             state.currentUser = user
-
+            console.log('res', state.currentUser)
         },
         logout(state) {
+            localStorage.removeItem('token')
+            delete axios.defaults.headers.common['Authorization']
             state.token = ''
+            state.currentUser = null
         },
+        updateUser(state, value) {
+            console.log('value', value)
+            state.currentUser = value
+        }
     },
     getters: {
         isLoggedIn: state => !!state.token,
@@ -39,7 +48,6 @@ const store = new Vuex.Store({
                     var token = res.data.token
                     window.localStorage.setItem('token', token)
                     axios.defaults.headers.common['Authorization'] = token
-                    console.log(res.data.user)
                     commit('auth_success', {
                         token,
                         user: res.data.user
@@ -47,6 +55,7 @@ const store = new Vuex.Store({
                     resolve(res)
                 }).catch((err) => {
                     window.localStorage.removeItem('token')
+                    console.log(err)
                     reject(err)
                 })
             })
@@ -54,22 +63,20 @@ const store = new Vuex.Store({
         register({
             commit
         }, user) {
-            return new Promise((resolve, reject) => {
-                userService.register(user).then((resp) => {
-                    console.log(resp);
-                    const token = resp.data.token
-                    const user = resp.data.user
-                    localStorage.setItem('token', token)
-                    axios.defaults.headers.common['Authorization'] = token
-                    commit('auth_success', {
-                        token,
-                        user
-                    })
-                    resolve(resp)
-                }).catch((err) => {
-                    localStorage.removeItem('token')
-                    reject(err)
+            return userService.register(user).then((resp) => {
+                console.log('res', resp);
+                const token = resp.data.token
+                const user = resp.data.user
+                localStorage.setItem('token', token)
+                axios.defaults.headers.common['Authorization'] = token
+                commit('auth_success', {
+                    token,
+                    user
                 })
+                return resp;
+            }).catch((err) => {
+                localStorage.removeItem('token')
+                throw err;
             })
         },
         logout({
@@ -81,7 +88,16 @@ const store = new Vuex.Store({
                 delete axios.defaults.headers.common['Authorization']
                 resolve()
             })
-        }
+        },
+        getUserByToken: (context) => {
+            if (!context.state.token) {
+                return;
+            } else {
+                let object = decode(context.state.token)
+                console.log(object)
+                context.commit('updateUser', object)
+            }
+        },
     }
 })
 export default store;

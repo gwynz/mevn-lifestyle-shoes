@@ -4,7 +4,7 @@
     <div class="relative max-w-lg mx-auto mt-32">
       <router-link to="/product">
         <span
-          class="absolute inset-y-0 left-0 pl-3 flex items-center cursor-pointer text-white bg-black-500"
+          class="absolute inset-y-0 left-0 pl-3 flex items-center cursor-pointer"
         >
           <svg class="h-5 w-5" viewBox="0 0 24 24">
             <path
@@ -28,28 +28,38 @@
       <div
         class="my-32 container mx-auto px-6 sm:px-12 lg:py-6 xl:py-16 relative flex flex-col sm:flex-row"
       >
-        <div class="sm:w-1/2 sm:pt-8 lg:pt-16 pb-8 sm:pb-16 lg:pb-32 relative z-30">
-          <h2 class="uppercase text-blue-900 font-bold tracking-wider text-2xl">Special Promo</h2>
+        <div
+          class="sm:w-1/2 sm:pt-8 lg:pt-16 pb-8 sm:pb-16 lg:pb-32 relative z-30"
+        >
+          <h2 class="uppercase text-blue-900 font-bold tracking-wider text-2xl">
+            Special Promo
+          </h2>
           <h1
             class="uppercase font-black text-green-550 leading-none tracking-wider mb-6 mt-4 text-5xl lg:text-6xl xl:text-8xl"
           >
             Autumn
             <br class="hidden sm:block" />Sale
           </h1>
-          <p
-            class="font-roboto text-lg sm:w-2/3 lg:w-1/2"
-          >Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod tempor incid idunt ut labore dolore.</p>
+          <p class="font-roboto text-lg sm:w-2/3 lg:w-1/2">
+            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do
+            eiusmod tempor incid idunt ut labore dolore.
+          </p>
         </div>
-        <div class="sm:w-1/2 lg:w-2/3 relative sm:absolute bottom-0 right-0 bg-gray-300">
+        <div
+          class="sm:w-1/2 lg:w-2/3 relative sm:absolute bottom-0 right-0 bg-gray-300"
+        >
           <h3
             class="monteserrat font-black text-white absolute top-0 left-0 mt-32 sm:mt-32 lg:mt-56 ml-0 lg:ml-12 z-10 text-xl sm:text-3xl lg:text-4xl xl:text-5xl transform rotate-90"
-          >up to 50%</h3>
+          >
+            up to 50%
+          </h3>
           <div
             class="left-0 bottom-0 w-full h-16 absolute z-30 flex items-center justify-center mb-12 lg:mb-24 xl:mb-32"
           >
             <span
               class="bg-black text-white uppercase font-black xl:text-2xl py-2 px-6 rounded-full"
-            >Get the code here</span>
+              >Get the code here</span
+            >
           </div>
           <img
             class="absolute left-0 right-0 w-full h-full object-cover z-10"
@@ -163,14 +173,18 @@
       <div class="container mx-auto px-6">
         <div
           class="h-64 rounded-md overflow-hidden bg-cover bg-center"
-          style="background-image: url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=144')"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=144');
+          "
         >
           <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
             <div class="px-10 max-w-xl">
               <h2 class="text-2xl text-white font-semibold">Sport Shoes</h2>
-              <p
-                class="mt-2 text-gray-400"
-              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
+              <p class="mt-2 text-gray-400">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempore facere provident molestias ipsam sint voluptatum
+                pariatur.
+              </p>
               <button
                 class="flex items-center mt-4 px-3 py-2 bg-gradient-green text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
               >
@@ -193,14 +207,18 @@
         <div class="md:flex mt-8 md:-mx-4">
           <div
             class="w-full h-64 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2"
-            style="background-image: url('https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
+            "
           >
             <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
               <div class="px-10 max-w-xl">
                 <h2 class="text-2xl text-white font-semibold">Back Pack</h2>
-                <p
-                  class="mt-2 text-gray-400"
-                >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
+                <p class="mt-2 text-gray-400">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Tempore facere provident molestias ipsam sint voluptatum
+                  pariatur.
+                </p>
                 <button
                   class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none"
                 >
@@ -222,14 +240,18 @@
           </div>
           <div
             class="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2"
-            style="background-image: url('https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+            "
           >
             <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
               <div class="px-10 max-w-xl">
                 <h2 class="text-2xl text-white font-semibold">Games</h2>
-                <p
-                  class="mt-2 text-gray-400"
-                >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
+                <p class="mt-2 text-gray-400">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Tempore facere provident molestias ipsam sint voluptatum
+                  pariatur.
+                </p>
                 <button
                   class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none"
                 >
@@ -252,16 +274,20 @@
         </div>
         <div class="mt-16">
           <h3 class="text-2xl font-medium">Fashions</h3>
-          <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+          <div
+            class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6"
+          >
             <router-link
               to="/detail"
               class="w-full card-item cursor-pointer"
-              v-for="i in [1,2,3,4,5,6,7,8]"
+              v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]"
               :key="i"
             >
               <div
                 class="flex items-end justify-end h-40 w-full bg-cover"
-                style="background-image: url(&quot;https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80&quot;);"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80');
+                "
               >
                 <button
                   class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
@@ -282,27 +308,37 @@
                 </button>
               </div>
               <div class="p-2 pt-4">
-                <div class="font-bold text-xl cursor-pointer">The Coldest Sunset</div>
+                <div class="font-bold text-xl cursor-pointer">
+                  The Coldest Sunset
+                </div>
               </div>
               <div class="p-2 text-red-700 text-xl">120$</div>
               <div class="p-2 pb-2">
                 <span
                   class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
-                >#photography</span>
+                  >#photography</span
+                >
                 <span
                   class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
-                >#travel</span>
+                  >#travel</span
+                >
               </div>
             </router-link>
           </div>
         </div>
         <div class="mt-16">
           <h3 class="text-2xl font-medium">Fashions</h3>
-          <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+          <div
+            class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6"
+          >
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80');
+                "
               >
                 <button
                   class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
@@ -327,10 +363,14 @@
                 <span class="mt-2">$12</span>
               </div>
             </div>
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+                "
               >
                 <button
                   class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
@@ -355,10 +395,14 @@
                 <span class="mt-2">$12</span>
               </div>
             </div>
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+                "
               >
                 <button
                   class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
@@ -383,10 +427,14 @@
                 <span class="mt-2">$12</span>
               </div>
             </div>
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1590664863685-a99ef05e9f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=345&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1590664863685-a99ef05e9f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=345&q=80');
+                "
               >
                 <button
                   class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"

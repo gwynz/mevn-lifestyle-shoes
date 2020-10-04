@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
 });
 router.post('/register', async (req, res) => {
     try {
+
         const user = new User({
             name: req.body.name,
             email: req.body.email,
@@ -32,6 +33,7 @@ router.post('/register', async (req, res) => {
             }
         })
         const newUser = await user.save();
+        console.log(newUser);
         jwt.sign({
             userId: newUser._id
         }, 'secretkey', function (err, token) {
@@ -67,7 +69,9 @@ router.post('/login', async (req, res) => {
             }
             // all ok => create token and send it to frontend
             jwt.sign({
-                userId: u._id
+                userId: u._id,
+                name: u.name,
+                email: u.email
             }, 'secretkey', function (err, token) {
                 res.status(201).json({
                     token: token,
@@ -113,6 +117,17 @@ router.delete('/:id', async (req, res) => {
         const newItem = await User.findByIdAndDelete(userId)
         if (!newItem) res.status(404).send("No item found")
         res.status(200).send()
+    } catch (err) {
+        res.status(500).send(err)
+    }
+})
+
+router.get('/:id', async (req, res) => {
+    try {
+        var user_id = req.params.id;
+        const user = await User.findById(user_id).exec();
+        if (!user) res.status(404).send("No user found")
+        res.status(200).json(user)
     } catch (err) {
         res.status(500).send(err)
     }
