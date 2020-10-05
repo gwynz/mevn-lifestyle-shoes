@@ -1,7 +1,7 @@
 <template>
   <header class="fixed inset-0 bottom-auto z-50">
     <header class="bg-gradient-green text-center text-white text-2xl bold">
-      <router-link to="/">LIFESTYLE SHOES</router-link>
+      <router-link to="/admin">LIFESTYLE SHOES</router-link>
     </header>
     <div
       class="block sm:hidden absolute left-0 cursor-pointer focus:outline-none"
