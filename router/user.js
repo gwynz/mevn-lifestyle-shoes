@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
 });
 router.post('/register', async (req, res) => {
     try {
-
         const user = new User({
             name: req.body.name,
             email: req.body.email,
@@ -25,13 +24,15 @@ router.post('/register', async (req, res) => {
         });
         User.findOne({
             email: user.email
-        }).then(user => {
-            if (user) {
+        }).then(u => {
+            console.log(u)
+            if (u) {
                 res.status(400).json({
                     message: 'Email already exists'
                 });
             }
         })
+        
         const newUser = await user.save();
         console.log(newUser);
         jwt.sign({
@@ -93,15 +94,17 @@ router.post('/login', async (req, res) => {
 //udapte
 router.post('/save', async (req, res) => {
     let user = req.body;
+    console.log(req.body)
     try {
         let doc = await User.findOneAndUpdate({
             _id: user._id
         }, {
             $set: {
-                ...user
+                ...user,
+                password: bcrypt.hashSync(req.body.password, 10)
             }
         }, {
-            new: true
+            new: false
         });
         res.status(201).json(doc);
     } catch (err) {
@@ -127,7 +130,7 @@ router.get('/:id', async (req, res) => {
         var user_id = req.params.id;
         const user = await User.findById(user_id).exec();
         if (!user) res.status(404).send("No user found")
-        res.status(200).json(user)
+        res.status(200).json(user_id)
     } catch (err) {
         res.status(500).send(err)
     }

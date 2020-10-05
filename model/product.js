@@ -13,4 +13,4 @@ const productSchema = new mongoose.Schema({
     enable: Boolean
 });
 
-module.exports = mongoose.model('Product', ProductSchema);
+module.exports = mongoose.model('Product', productSchema);

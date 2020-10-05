@@ -26,7 +26,8 @@ server.use(cors());
 const r_user = require('./router/user');
 server.use('/user', r_user);
 
-
+const r_product = require('./router/product');
+server.use('/product', r_product);
 
 const port = process.env.PORT || 3100
 server.listen(port, () => console.log("Server started!"));
