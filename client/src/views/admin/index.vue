@@ -6,20 +6,20 @@
     >
       <div class="flex flex-col items-center mt-10">
         <h1
-          class="text-6xl font-light text-green-600 dark:text-green-600 mt-0 transition duration-500 ease-in-out"
+          class="text-3xl font-light text-green-600 dark:text-green-600 mt-0 transition duration-500 ease-in-out"
         >
-          pleo
+          ADMIN
         </h1>
       </div>
 
-      <ul>
+      <ul class="mt-20">
         <li
           class="pl-8 py-2 font-semibold text-gray-700 dark:text-gray-400 hover:bg-green-600 dark-hover:bg-pink-500 mb-2 transition duration-500 ease-in-out"
         >
           <button
             class="focus:text-green-550 dark-focus:text-green-600 focus:outline-none w-full transition duration-500 ease-in-out"
           >
-            <span class="flex items-center">
+            <router-link class="flex items-center" to="/admin/product">
               <svg class="h-4 w-4 fill-current" viewBox="0 0 576 512">
                 <path
                   d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5
@@ -35,24 +35,8 @@
 								12 5.4 12 12z"
                 />
               </svg>
-              <span class="ml-4 capitalize">my card</span>
-            </span>
-          </button>
-        </li>
-
-        <li
-          class="pl-8 py-2 font-semibold text-green-550 dark:text-green-600 border-l-2 border-pink-500 hover:bg-green-600 mb-2 transition duration-500 ease-in-out"
-        >
-          <button
-            class="focus:text-green-550 dark-focus:text-green-600 focus:outline-none w-full transition duration-500 ease-in-out"
-          >
-            <span class="flex items-center">
-              <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
-                <path d="M15 5v4h-4v4H7v4H3v3h7v-4h4v-4h4V8h4V5h-7z" />
-              </svg>
-
-              <span class="ml-4 capitalize">expenses</span>
-            </span>
+              <span class="ml-4 capitalize">Product</span>
+            </router-link>
           </button>
         </li>
 
@@ -165,9 +149,8 @@
       <div
         class="px-24 py-12 text-gray-700 dark:text-gray-500 transition duration-500 ease-in-out"
       >
-        <product/>
+        <router-view></router-view>
       </div>
-      
     </main>
   </div>
 </template>

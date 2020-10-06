@@ -5,6 +5,8 @@ import Detail from '@/views/detail-product/index.vue'
 import LandingPage from '@/views/landing-page/index.vue'
 import checkoutPage from '@/views/checkout-page/index.vue'
 import admin from '@/views/admin/index.vue'
+import adproduct from '@/views/admin/product/index.vue'
+import adListProduct from '@/views/admin/list-product/index.vue'
 import STORE from '@/store/app.js'
 Vue.use(Router)
 var router = new Router({
@@ -43,7 +45,16 @@ var router = new Router({
       component: admin,
       meta: {
         requiresAuth: true
-      }
+      },
+      children: [{
+          path: 'product',
+          component: adproduct
+        },
+        {
+          path: 'list-product',
+          component: adListProduct
+        }
+      ]
     },
   ]
 })

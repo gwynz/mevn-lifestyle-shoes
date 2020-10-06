@@ -54,3 +54,11 @@ body {
         clip-path: inset(0 round 10px);
     }
 }
+
+.router-link-active {
+    @apply text-green-550;
+
+    &:hover {
+        @apply text-gray-100;
+    }
+}
