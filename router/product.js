@@ -17,7 +17,9 @@ router.get('/categories', async (req, res) => {
 });
 router.get('/categories/:id', async (req, res) => {
     try {
-        const categories = await Category.find({_id: req.params.id});
+        const categories = await Category.find({
+            _id: req.params.id
+        });
 
         res.json(categories);
     } catch (err) {
@@ -38,7 +40,9 @@ router.delete('/categories/:id', async (req, res) => {
 });
 router.get('/productFromCategories/:id', async (req, res) => {
     try {
-        const categories = await (await Category.findOne({_id: req.params.id}, 'name products').populate("products"));
+        const categories = await (await Category.findOne({
+            _id: req.params.id
+        }, 'name products').populate("products"));
         res.json(categories.products);
     } catch (err) {
         res.status(500).json({
@@ -47,7 +51,7 @@ router.get('/productFromCategories/:id', async (req, res) => {
     }
 });
 
-router.get('/', async (req, res)=>{
+router.get('/', async (req, res) => {
     try {
         const products = await Product.find();
         res.json(products)
@@ -58,10 +62,10 @@ router.get('/', async (req, res)=>{
     }
 })
 
-router.post('/categories', async (req, res)=>{
+router.post('/categories', async (req, res) => {
     try {
         const category = new Category({
-            name : req.body.name
+            name: req.body.name
         })
         const newC = await category.save();
         res.json(newC)
@@ -72,10 +76,10 @@ router.post('/categories', async (req, res)=>{
     }
 })
 
-router.post('/categories', async (req, res)=>{
+router.post('/categories', async (req, res) => {
     try {
         const category = new Category({
-            name : req.body.name
+            name: req.body.name
         })
         const newC = await category.save();
         res.json(newC)
@@ -86,17 +90,17 @@ router.post('/categories', async (req, res)=>{
     }
 })
 
-router.post('/', async (req, res)=>{
+router.post('/', async (req, res) => {
     try {
         const product = new Product({
-            name : req.body.name,
-            number : req.body.number,
+            name: req.body.name,
+            number: req.body.number,
             price: req.body.price,
             id_category: req.body.id_category,
-            enable: req.body.enable || true
+            enable: req.body.enable
         })
         const newP = await product.save();
-        if(newP.id_category) addProductToCategories(newP.id_category, newP);
+        if (newP.id_category) addProductToCategories(newP.id_category, newP);
         res.json(newP)
     } catch (error) {
         res.status(500).json({
@@ -106,7 +110,9 @@ router.post('/', async (req, res)=>{
 })
 router.get('/:id', async (req, res) => {
     try {
-        const newP = await Product.find({_id: req.params.id});
+        const newP = await Product.find({
+            _id: req.params.id
+        });
 
         res.json(newP);
     } catch (err) {
@@ -126,10 +132,14 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-const addProductToCategories = function(categoryId, product) {
-    Category.findOneAndUpdate(
-        { _id: categoryId },
-        { $push: { products: product._id } },
+const addProductToCategories = function (categoryId, product) {
+    Category.findOneAndUpdate({
+            _id: categoryId
+        }, {
+            $push: {
+                products: product._id
+            }
+        },
         function (error, success) {
             if (error) {
                 console.log(error);

@@ -19,7 +19,7 @@
           <button
             class="focus:text-green-550 dark-focus:text-green-600 focus:outline-none w-full transition duration-500 ease-in-out"
           >
-            <router-link class="flex items-center" to="/admin/product">
+            <router-link class="flex items-center" to="/admin/list-product">
               <svg class="h-4 w-4 fill-current" viewBox="0 0 576 512">
                 <path
                   d="M527.9 32H48.1C21.5 32 0 53.5 0 80v352c0 26.5

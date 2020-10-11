@@ -12,7 +12,7 @@
             id="cus_name"
             name="cus_name"
             type="text"
-            placeholder="Your Name"
+            placeholder="Name"
             aria-label="Name"
             v-model="model.name"
           />
@@ -21,6 +21,7 @@
           <label class="block text-sm text-gray-600">Details</label>
         </div>
         <div class="inline-block mt-2 w-1/2 pr-1">
+          <label class="block text-sm text-gray-600">Price</label>
           <input
             class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded"
             type="number"
@@ -29,7 +30,8 @@
             v-model="model.price"
           />
         </div>
-        <div class="inline-block mt-2 -mx-1 pl-1 w-1/2">
+        <div class="inline-block mt-1 -mx-1 pl-1 w-1/2">
+          <label class="block text-sm text-gray-600">Number</label>
           <input
             class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded"
             type="number"
@@ -39,10 +41,10 @@
           />
         </div>
         <div class>
-          <label class="block text-sm text-gray-600" for="cus_name"
+          <label class="block mt-2 text-sm text-gray-600" for="cus_name"
             >Category</label
           >
-          <div class="py-4">
+          <div class="py-2">
             <div class="dropdown inline-block relative">
               <div
                 class="text-sm cursor-pointer bg-gray-300 text-gray-700 py-2 px-4 rounded inline-flex items-center"
@@ -97,6 +99,7 @@
           <button
             class="px-4 py-1 mx-auto text-white font-light tracking-wider bg-gray-900 rounded"
             type="submit"
+            @click.prevent="submit"
           >
             Submit
           </button>
