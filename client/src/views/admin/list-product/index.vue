@@ -16,7 +16,7 @@
           <div class="flex flex-row mb-1 sm:mb-0">
             <div class="relative">
               <select
-                class="appearance-none h-full rounded-l border block w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="appearance-none h-full rounded-l border block w-full border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus: focus:border-gray-500"
               >
                 <option>5</option>
                 <option>10</option>
@@ -38,7 +38,7 @@
             </div>
             <div class="relative">
               <select
-                class="h-full rounded-r border-t sm:rounded-r-none sm:border-r-0 border-r border-b block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-white focus:border-gray-500"
+                class="h-full rounded-r border-t sm:rounded-r-none sm:border-r-0 border-r border-b block appearance-none w-full border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus: focus:border-gray-500"
               >
                 <option>All</option>
                 <option>Active</option>
@@ -74,7 +74,7 @@
             </span>
             <input
               placeholder="Search"
-              class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+              class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full text-sm placeholder-gray-400 text-gray-700 focus: focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
             />
           </div>
         </div>
@@ -108,11 +108,8 @@
                 </tr>
               </thead>
               <tbody>
-                <code>{{ listProduct }}</code>
                 <tr v-for="(item, index) in listProduct" :key="index">
-                  <td
-                    class="px-5 py-5 border-b border-gray-200 bg-white text-sm"
-                  >
+                  <td class="px-5 py-5 border-b border-gray-200 text-sm">
                     <div class="flex items-center">
                       <div class="flex-shrink-0 w-10 h-10">
                         <img
@@ -128,19 +125,13 @@
                       </div>
                     </div>
                   </td>
-                  <td
-                    class="px-5 py-5 border-b border-gray-200 bg-white text-sm"
-                  >
+                  <td class="px-5 py-5 border-b border-gray-200 text-sm">
                     <p class="text-gray-900 whitespace-no-wrap">Admin</p>
                   </td>
-                  <td
-                    class="px-5 py-5 border-b border-gray-200 bg-white text-sm"
-                  >
+                  <td class="px-5 py-5 border-b border-gray-200 text-sm">
                     <p class="text-gray-900 whitespace-no-wrap">Jan 21, 2020</p>
                   </td>
-                  <td
-                    class="px-5 py-5 border-b border-gray-200 bg-white text-sm"
-                  >
+                  <td class="px-5 py-5 border-b border-gray-200 text-sm">
                     <span
                       class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
                     >
@@ -162,7 +153,7 @@
               </tbody>
             </table>
             <div
-              class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between"
+              class="px-5 py-5 border-t flex flex-col xs:flex-row items-center xs:justify-between"
             >
               <span class="text-xs xs:text-sm text-gray-900">
                 Showing 1 to 4 of 50 Entries

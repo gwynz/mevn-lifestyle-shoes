@@ -10,6 +10,7 @@
             <path
               d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
               stroke="currentColor"
+              fill="#e2e8f0"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -46,7 +47,7 @@
           </p>
         </div>
         <div
-          class="sm:w-1/2 lg:w-2/3 relative sm:absolute bottom-0 right-0 bg-gray-300"
+          class="sm:w-1/2 lg:w-2/3 xl:w-1/2 relative sm:absolute bottom-0 right-0 bg-gray-300"
         >
           <h3
             class="monteserrat font-black text-white absolute top-0 left-0 mt-32 sm:mt-32 lg:mt-56 ml-0 lg:ml-12 z-10 text-xl sm:text-3xl lg:text-4xl xl:text-5xl transform rotate-90"

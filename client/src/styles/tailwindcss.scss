@@ -12,7 +12,7 @@ body {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
+    color: black;
 }
 
 .bg-gradient-green {
@@ -41,7 +41,7 @@ body {
         border-radius: 10px;
         overflow: hidden;
         z-index: -1;
-        background: #1f2229;
+        @apply bg-black-500;
         -webkit-clip-path: inset(1rem 0 1rem 1rem round 10px);
         clip-path: inset(1rem 0 1rem 1rem round 10px);
         contain: strict;
@@ -60,5 +60,13 @@ body {
 
     &:hover {
         @apply text-gray-100;
+    }
+}
+
+
+//@responsive
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
     }
 }
