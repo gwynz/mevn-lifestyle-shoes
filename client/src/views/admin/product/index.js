@@ -24,6 +24,7 @@ export default {
             productService.post(this.model).then((res) => {
                 this.resetModel();
                 console.log(res)
+                this.supmitFile(res.data._id)
             }).catch((err) => {
                 console.log(err)
             });
@@ -51,7 +52,6 @@ export default {
                     url: URL.createObjectURL(image)
                 });
             });
-            this.supmitFile('123')
         },
         supmitFile(id) {
             productService.uploadImages(id, this.images).then((res) => {

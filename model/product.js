@@ -10,7 +10,11 @@ const productSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
     },
-    enable: Boolean
+    enable: Boolean,
+    images: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "ProductImage"
+    }]
 });
 
 module.exports = mongoose.model('Product', productSchema);

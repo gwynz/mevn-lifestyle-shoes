@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Category = require("../model/category");
 const Product = require("../model/product");
+const ImagesProduct = require("../model/product_images");
 const upload = require('../multer');
 const cloudinary = require('../cloudinary');
 const fs = require('fs')
@@ -148,6 +149,15 @@ router.use('/upload-images', upload.array('images'), async (req, res) => {
             const newPath = await uploader(path)
             urls.push(newPath);
             fs.unlinkSync(path);
+
+            // save product images
+            const image = new ImagesProduct({
+                url: newPath.url,
+                name: file.filename,
+                id_product: req.body.productId
+
+            })
+            await image.save();
         }
         res.status(200).json({
             message: 'image upload successfully',
