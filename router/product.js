@@ -136,6 +136,7 @@ router.delete('/:id', async (req, res) => {
 
 
 router.use('/upload-images', upload.array('images'), async (req, res) => {
+    console.log(req.files)
     const uploader = async (path) => await cloudinary.uploads(path, 'sneaker-images')
     if (req.method === 'POST') {
         const urls = []

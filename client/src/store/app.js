@@ -64,7 +64,6 @@ const store = new Vuex.Store({
             commit
         }, user) {
             return userService.register(user).then((resp) => {
-                console.log('res', resp);
                 const token = resp.data.token
                 const user = resp.data.user
                 localStorage.setItem('token', token)

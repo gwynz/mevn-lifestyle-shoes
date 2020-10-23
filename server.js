@@ -5,7 +5,6 @@ const cors = require('cors');
 const path = require('path');
 const bodyParser = require("body-parser");
 //const serveStatic = require('serve-static');
-
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {
     useNewUrlParser: true,

@@ -16,13 +16,10 @@ export default {
     uploadImages(id, images) {
         this.loading = true;
         let formData = new FormData();
-        console.log(images)
-        images = images.map((item) => {
-            return item.file
-        })
-        formData.append("images", images);
+        images.forEach(element => {
+            formData.append("images", element.file);
+        });
         formData.append("productId", id);
-        console.log(formData)
         return Api().post('product/upload-images', formData, {
             headers: {
                 "Content-Type": "multipart/form-data",
