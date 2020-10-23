@@ -1,13 +1,16 @@
 import {
     createIndexes
 } from "../../../../../model/user"
-
+import pagination from "@/components/partial/pagination/index.vue"
 import productService from "@/services/productService"
 export default {
     data() {
         return {
             listProduct: []
         }
+    },
+    components: {
+        pagination
     },
     created() {
         this.getData();

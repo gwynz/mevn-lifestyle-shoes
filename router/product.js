@@ -5,7 +5,10 @@ const Product = require("../model/product");
 const ImagesProduct = require("../model/product_images");
 const upload = require('../multer');
 const cloudinary = require('../cloudinary');
-const fs = require('fs')
+const fs = require('fs');
+const {
+    log
+} = require('console');
 
 router.get('/categories', async (req, res) => {
     try {
@@ -53,10 +56,24 @@ router.get('/productFromCategories/:id', async (req, res) => {
         });
     }
 });
-
+router.get('/:page', async (req, res, next) => {
+    const resPerPage = 9; // results per page
+    const page = req.params.page || 1; // Page
+    try {
+        const foundProducts = await Product.find().skip((resPerPage * page) - resPerPage).limit(resPerPage);
+        const numOfProducts = await Product.count();
+        res.status(200).json({
+            d: foundProducts,
+            c: numOfProducts,
+            p: page
+        })
+    } catch (err) {
+        res.status(500).send(err)
+    }
+})
 router.get('/', async (req, res) => {
     try {
-        const products = await Product.find();
+        const products = await Product.find().populate('images');
         res.json(products)
     } catch (error) {
         res.status(500).json({
@@ -142,6 +159,7 @@ router.use('/upload-images', upload.array('images'), async (req, res) => {
     if (req.method === 'POST') {
         const urls = []
         const files = req.files
+        const idPd = req.body.productId
         for (const file of files) {
             const {
                 path
@@ -154,10 +172,10 @@ router.use('/upload-images', upload.array('images'), async (req, res) => {
             const image = new ImagesProduct({
                 url: newPath.url,
                 name: file.filename,
-                id_product: req.body.productId
-
+                id_product: idPd
             })
             await image.save();
+            addImageToProduct(idPd, image)
         }
         res.status(200).json({
             message: 'image upload successfully',
@@ -188,7 +206,23 @@ const addProductToCategories = function (categoryId, product) {
     );
 };
 
-
+const addImageToProduct = function (productId, image) {
+    Product.findOneAndUpdate({
+            _id: productId
+        }, {
+            $push: {
+                images: image._id
+            }
+        },
+        function (error, success) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log(success);
+            }
+        }
+    );
+};
 
 
 

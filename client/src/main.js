@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/app'
+import vuetify from './plugins/vuetify';
 //import VueSweetalert2 from 'vue-sweetalert2'
 
 //Vue.use(VueSweetalert2)
@@ -15,6 +16,8 @@ new Vue({
   router,
   store: store,
   template: '<App/>',
+  vuetify,
+
   components: {
     App
   }
