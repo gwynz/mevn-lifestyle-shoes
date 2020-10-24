@@ -16,14 +16,17 @@ module.exports = {
       current: 'currentColor',
       primary: '#e53e3e',
       primary_hover: '#f56565',
-      black: '#fff',
-      white: '#000',
+      black: '#000',
+      white: '#fff',
       black: {
-        // 100: "#9b9dad",
-        // 400: '#2c303a',
-        // 500: '#1e1f26',
-        // 700: '#131417',
-        // 900: '#010101'
+        100: "#9b9dad",
+        400: '#2c303a',
+        500: '#1e1f26',
+        700: '#131417',
+        900: '#010101'
+      },
+      white: {
+        '000': '#fff',
         100: "#f7fafc",
         400: '#edf2f7',
         500: '#e2e8f0',

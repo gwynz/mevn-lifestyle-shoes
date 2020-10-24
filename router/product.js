@@ -56,16 +56,17 @@ router.get('/productFromCategories/:id', async (req, res) => {
         });
     }
 });
-router.get('/:page', async (req, res, next) => {
-    const resPerPage = 9; // results per page
-    const page = req.params.page || 1; // Page
+router.get('/p/:page', async (req, res, next) => {
+    const resPerPage = 5; // results per page
+    const page = Number(req.params.page) || 1; // Page
     try {
-        const foundProducts = await Product.find().skip((resPerPage * page) - resPerPage).limit(resPerPage);
+        const foundProducts = await Product.find().populate('images').skip((resPerPage * page) - resPerPage).limit(resPerPage);
         const numOfProducts = await Product.count();
         res.status(200).json({
             d: foundProducts,
             c: numOfProducts,
-            p: page
+            p: page,
+            tp: Math.ceil(numOfProducts / resPerPage)
         })
     } catch (err) {
         res.status(500).send(err)
@@ -154,7 +155,6 @@ router.delete('/:id', async (req, res) => {
 
 
 router.use('/upload-images', upload.array('images'), async (req, res) => {
-    console.log(req.files)
     const uploader = async (path) => await cloudinary.uploads(path, 'sneaker-images')
     if (req.method === 'POST') {
         const urls = []

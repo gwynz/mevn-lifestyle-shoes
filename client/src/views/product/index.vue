@@ -17,23 +17,27 @@
             </svg>
           </span>
           <input
-            class="w-full border rounded-md pl-10 pr-4 py-2 border-black-500 focus:border-green-500 focus:outline-none focus:shadow-outline bg-black-500"
+            class="w-full border rounded-md pl-10 pr-4 py-2 border-white-500 focus:border-green-500 focus:outline-none focus:shadow-outline bg-black-500"
             type="text"
             placeholder="Search"
           />
         </div>
       </section>
       <section class="px-8 sm:pl-32 xl:pl-64 py-4 p-8">
-        <content class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10">
+        <content
+          class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-10"
+        >
           <router-link
             to="/detail"
             class="w-full card-item cursor-pointer"
-            v-for="i in [1,2,3,4,5,6]"
+            v-for="i in [1, 2, 3, 4, 5, 6]"
             :key="i"
           >
             <div
               class="flex items-end justify-end h-40 w-full bg-cover"
-              style="background-image: url(&quot;https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80&quot;);"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1500&amp;q=80');
+              "
             >
               <button
                 class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 focus:outline-none"
@@ -54,28 +58,34 @@
               </button>
             </div>
             <div class="p-2 pt-4">
-              <div class="font-bold text-xl cursor-pointer">The Coldest Sunset</div>
+              <div class="font-bold text-xl cursor-pointer">
+                The Coldest Sunset
+              </div>
             </div>
             <div class="p-2 text-red-700 text-xl">120$</div>
             <div class="p-2 pb-2 hidden lg:block">
               <span
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
-              >#photography</span>
+                >#photography</span
+              >
               <span
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
-              >#travel</span>
+                >#travel</span
+              >
             </div>
           </router-link>
 
           <router-link
             to="/detail"
             class="w-full card-item cursor-pointer"
-            v-for="i in [1,2,3,4,5,6]"
+            v-for="i in [1, 2, 3, 4, 5, 6]"
             :key="i"
           >
             <div
               class="flex items-end justify-end h-40 w-full bg-cover"
-              style="background-image: url(https://img.ssensemedia.com/image/upload/b_white/c_scale,h_820/f_auto,dpr_1.0/202799F127006_1.jpg);"
+              style="
+                background-image: url(https://img.ssensemedia.com/image/upload/b_white/c_scale,h_820/f_auto,dpr_1.0/202799F127006_1.jpg);
+              "
             >
               <button
                 class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 focus:outline-none"
@@ -96,16 +106,20 @@
               </button>
             </div>
             <div class="p-2 pt-4">
-              <div class="font-bold text-xl cursor-pointer">The Coldest Sunset</div>
+              <div class="font-bold text-xl cursor-pointer">
+                The Coldest Sunset
+              </div>
             </div>
             <div class="p-2 text-red-700 text-xl">120$</div>
             <div class="p-2 pb-2 hidden lg:block">
               <span
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
-              >#photography</span>
+                >#photography</span
+              >
               <span
                 class="text-gray-700 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 cursor-pointer hover:opacity-75"
-              >#travel</span>
+                >#travel</span
+              >
             </div>
           </router-link>
         </content>

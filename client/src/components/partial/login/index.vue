@@ -7,7 +7,7 @@
     >
       <div
         @click.stop
-        class="absolute inset-0 left-auto w-3/12 bg-black-900 z-40 opacity-100"
+        class="absolute inset-0 left-auto w-3/12 bg-white-700 z-40 opacity-100"
       >
         <div class="px-16 py-24">
           <div class="flex items-center justify-between">

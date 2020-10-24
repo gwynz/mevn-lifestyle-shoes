@@ -47,6 +47,10 @@ var router = new Router({
         requiresAuth: true
       },
       children: [{
+          path: '/',
+          component: adListProduct
+        },
+        {
           path: 'product',
           component: adproduct
         },

@@ -10,6 +10,9 @@ export default {
     get(params) {
         return Api().get('product/' + params.id)
     },
+    getPage(page) {
+        return Api().get('product/p/' + page)
+    },
     delete(id) {
         return Api().delete('product/' + id)
     },

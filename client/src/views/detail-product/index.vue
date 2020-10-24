@@ -29,7 +29,9 @@
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                 </button>
                 <span class="text-lg mx-2">20</span>
@@ -54,15 +56,23 @@
                 <button
                   class="h-5 w-5 rounded-full bg-blue-600 border-2 border-blue-200 mr-2 focus:outline-none"
                 ></button>
-                <button class="h-5 w-5 rounded-full bg-teal-600 mr-2 focus:outline-none"></button>
-                <button class="h-5 w-5 rounded-full bg-pink-600 mr-2 focus:outline-none"></button>
+                <button
+                  class="h-5 w-5 rounded-full bg-teal-600 mr-2 focus:outline-none"
+                ></button>
+                <button
+                  class="h-5 w-5 rounded-full bg-pink-600 mr-2 focus:outline-none"
+                ></button>
               </div>
             </div>
             <div class="flex items-center mt-6">
               <button
-                class="px-8 py-2 bg-black-400 text-white font-medium rounded hover:bg-black-100 focus:outline-none focus:bg-black-100"
-              >Order Now</button>
-              <button class="mx-2 border bg-black-400 rounded-md px-4 p-2 hover:bg-black-100">
+                class="px-8 py-2 bg-white-400 text-white-000 font-medium rounded hover:bg-white-100 focus:outline-none focus:bg-white-100"
+              >
+                Order Now
+              </button>
+              <button
+                class="mx-2 border bg-white-400 rounded-md px-4 p-2 hover:bg-white-100"
+              >
                 <svg
                   class="h-5 w-5"
                   fill="none"
@@ -82,14 +92,20 @@
         </div>
         <div class="mt-16">
           <h3 class="text-2xl font-medium">More Products</h3>
-          <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+          <div
+            class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6"
+          >
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80');
+                "
               >
                 <button
-                  class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                  class="p-2 rounded-full bg-gradient-green text-white-000 mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
                 >
                   <svg
                     class="h-5 w-5"
@@ -111,13 +127,17 @@
                 <span class="text-gray-500 mt-2">$12</span>
               </div>
             </div>
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+                "
               >
                 <button
-                  class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                  class="p-2 rounded-full bg-gradient-green text-white-000 mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
                 >
                   <svg
                     class="h-5 w-5"
@@ -139,13 +159,17 @@
                 <span class="text-gray-500 mt-2">$12</span>
               </div>
             </div>
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1532667449560-72a95c8d381b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+                "
               >
                 <button
-                  class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                  class="p-2 rounded-full bg-gradient-green text-white-000 mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
                 >
                   <svg
                     class="h-5 w-5"
@@ -167,13 +191,17 @@
                 <span class="text-gray-500 mt-2">$12</span>
               </div>
             </div>
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+            <div
+              class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+            >
               <div
                 class="flex items-end justify-end h-56 w-full bg-cover"
-                style="background-image: url('https://images.unsplash.com/photo-1590664863685-a99ef05e9f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=345&q=80')"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1590664863685-a99ef05e9f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=345&q=80');
+                "
               >
                 <button
-                  class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                  class="p-2 rounded-full bg-gradient-green text-white-000 mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
                 >
                   <svg
                     class="h-5 w-5"
@@ -201,8 +229,12 @@
     </main>
 
     <footer>
-      <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold text-gray-500 hover:text-gray-400">Brand</a>
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold text-gray-500 hover:text-gray-400"
+          >Brand</a
+        >
         <p class="py-2 text-gray-500 sm:py-0">All rights reserved</p>
       </div>
     </footer>

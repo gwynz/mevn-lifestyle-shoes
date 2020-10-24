@@ -1,7 +1,14 @@
 <template>
   <transition name="right-to">
-    <div v-if="isShow" class="fixed inset-0 z-20 bg-opacity-600" @click="isShow=false">
-      <div @click.stop class="absolute inset-0 left-auto w-3/12 bg-black-900 z-40 opacity-100 p-8">
+    <div
+      v-if="isShow"
+      class="fixed inset-0 z-20 bg-opacity-600"
+      @click="isShow = false"
+    >
+      <div
+        @click.stop
+        class="absolute inset-0 left-auto w-3/12 bg-white-700 z-40 opacity-100 p-8"
+      >
         <div class="px-4 py-24">
           <div class="flex items-center justify-between">
             <h3 class="text-xl uppercase font-bold">Your cart</h3>
@@ -40,7 +47,9 @@
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path
+                        d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </button>
                   <span class="mx-2">2</span>
@@ -82,7 +91,9 @@
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path
+                        d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </button>
                   <span class="mx-2">2</span>
@@ -124,7 +135,9 @@
                       viewBox="0 0 24 24"
                       stroke="currentColor"
                     >
-                      <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <path
+                        d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </button>
                   <span class="mx-2">2</span>

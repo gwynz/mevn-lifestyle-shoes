@@ -20,7 +20,7 @@
       </router-link>
 
       <input
-        class="w-full border rounded-md pl-10 pr-4 py-2 border-black-500 focus:border-green-500 focus:outline-none focus:shadow-outline bg-black-500"
+        class="w-full border rounded-md pl-10 pr-4 py-2 border-white-500 focus:border-green-500 focus:outline-none focus:shadow-outline bg-white-500"
         type="text"
         placeholder="Search"
       />
@@ -36,7 +36,7 @@
             Special Promo
           </h2>
           <h1
-            class="uppercase font-black text-green-550 leading-none tracking-wider mb-6 mt-4 text-5xl lg:text-6xl xl:text-8xl"
+            class="uppercase font-white text-green-550 leading-none tracking-wider mb-6 mt-4 text-5xl lg:text-6xl xl:text-8xl"
           >
             Autumn
             <br class="hidden sm:block" />Sale
@@ -50,7 +50,7 @@
           class="sm:w-1/2 lg:w-2/3 xl:w-1/2 relative sm:absolute bottom-0 right-0 bg-gray-300"
         >
           <h3
-            class="monteserrat font-black text-white absolute top-0 left-0 mt-32 sm:mt-32 lg:mt-56 ml-0 lg:ml-12 z-10 text-xl sm:text-3xl lg:text-4xl xl:text-5xl transform rotate-90"
+            class="monteserrat font-white text-white-000 absolute top-0 left-0 mt-32 sm:mt-32 lg:mt-56 ml-0 lg:ml-12 z-10 text-xl sm:text-3xl lg:text-4xl xl:text-5xl transform rotate-90"
           >
             up to 50%
           </h3>
@@ -58,7 +58,7 @@
             class="left-0 bottom-0 w-full h-16 absolute z-30 flex items-center justify-center mb-12 lg:mb-24 xl:mb-32"
           >
             <span
-              class="bg-black text-white uppercase font-black xl:text-2xl py-2 px-6 rounded-full"
+              class="bg-white text-white-000 uppercase font-white xl:text-2xl py-2 px-6 rounded-full"
               >Get the code here</span
             >
           </div>
@@ -180,14 +180,14 @@
         >
           <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
             <div class="px-10 max-w-xl">
-              <h2 class="text-2xl text-white font-semibold">Sport Shoes</h2>
+              <h2 class="text-2xl text-white-000 font-semibold">Sport Shoes</h2>
               <p class="mt-2 text-gray-400">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Tempore facere provident molestias ipsam sint voluptatum
                 pariatur.
               </p>
               <button
-                class="flex items-center mt-4 px-3 py-2 bg-gradient-green text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                class="flex items-center mt-4 px-3 py-2 bg-gradient-green text-white-000 text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
               >
                 <span>Shop Now</span>
                 <svg
@@ -214,14 +214,14 @@
           >
             <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
               <div class="px-10 max-w-xl">
-                <h2 class="text-2xl text-white font-semibold">Back Pack</h2>
+                <h2 class="text-2xl text-white-000 font-semibold">Back Pack</h2>
                 <p class="mt-2 text-gray-400">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Tempore facere provident molestias ipsam sint voluptatum
                   pariatur.
                 </p>
                 <button
-                  class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none"
+                  class="flex items-center mt-4 text-white-000 text-sm uppercase font-medium rounded hover:underline focus:outline-none"
                 >
                   <span>Shop Now</span>
                   <svg
@@ -247,14 +247,14 @@
           >
             <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
               <div class="px-10 max-w-xl">
-                <h2 class="text-2xl text-white font-semibold">Games</h2>
+                <h2 class="text-2xl text-white-000 font-semibold">Games</h2>
                 <p class="mt-2 text-gray-400">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Tempore facere provident molestias ipsam sint voluptatum
                   pariatur.
                 </p>
                 <button
-                  class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none"
+                  class="flex items-center mt-4 text-white-000 text-sm uppercase font-medium rounded hover:underline focus:outline-none"
                 >
                   <span>Shop Now</span>
                   <svg
@@ -291,7 +291,7 @@
                 "
               >
                 <button
-                  class="p-2 rounded-full bg-gradient-green text-white mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
+                  class="p-2 rounded-full bg-gradient-green text-white-000 mx-5 -mb-4 hover:bg-blue-500 focus:outline-none focus:bg-blue-500"
                 >
                   <svg
                     fill="none"
@@ -342,7 +342,7 @@
                 "
               >
                 <button
-                  class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
+                  class="p-2 rounded-full bg-green-550 text-white-000 mx-5 -mb-4 focus:outline-none"
                 >
                   <svg
                     class="h-5 w-5"
@@ -374,7 +374,7 @@
                 "
               >
                 <button
-                  class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
+                  class="p-2 rounded-full bg-green-550 text-white-000 mx-5 -mb-4 focus:outline-none"
                 >
                   <svg
                     class="h-5 w-5"
@@ -406,7 +406,7 @@
                 "
               >
                 <button
-                  class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
+                  class="p-2 rounded-full bg-green-550 text-white-000 mx-5 -mb-4 focus:outline-none"
                 >
                   <svg
                     class="h-5 w-5"
@@ -438,7 +438,7 @@
                 "
               >
                 <button
-                  class="p-2 rounded-full bg-green-550 text-white mx-5 -mb-4 focus:outline-none"
+                  class="p-2 rounded-full bg-green-550 text-white-000 mx-5 -mb-4 focus:outline-none"
                 >
                   <svg
                     class="h-5 w-5"

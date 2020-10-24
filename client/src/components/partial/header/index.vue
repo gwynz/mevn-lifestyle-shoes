@@ -1,7 +1,9 @@
 <template>
   <header class="fixed inset-0 bottom-auto z-50">
     <header class="bg-gradient-green text-center text-white text-2xl bold">
-      <router-link to="/admin">LIFESTYLE SHOES</router-link>
+      <router-link to="/admin" class="text-white-500"
+        >LIFESTYLE SHOES</router-link
+      >
     </header>
     <div
       class="block sm:hidden absolute left-0 cursor-pointer focus:outline-none"
@@ -11,11 +13,11 @@
       <img src="@/images/menu.svg" alt="" class="w-6 h-6" />
     </div>
     <nav
-      class="hidden sm:flex justify-center p-2 bg-black-400 relative items-center"
+      class="hidden sm:flex justify-center p-2 bg-white-400 relative items-center"
     >
       <div class="inline-flex" id="main_menu">
         <ul
-          class="flex flex-wrap p-1 md:p-2 sm:bg-black-500 sm:rounded-full text-sm md:text-base"
+          class="flex flex-wrap p-1 md:p-2 sm:bg-white-500 sm:rounded-full text-sm md:text-base"
           id="menu_nav"
         >
           <li
@@ -40,7 +42,7 @@
               <span class="firstlevel">Amministra</span>
             </a>
             <ul
-              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-black-500 z-10 hidden group-hover:block"
+              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white-500 z-10 hidden group-hover:block"
             >
               <svg
                 class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0"
@@ -94,7 +96,7 @@
               <span class="firstlevel">Modera</span>
             </a>
             <ul
-              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-black-500 z-10 hidden group-hover:block"
+              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white-500 z-10 hidden group-hover:block"
             >
               <svg
                 class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0"
@@ -138,7 +140,7 @@
               <span class="firstlevel">Profilo</span>
             </a>
             <ul
-              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-black-500 z-10 hidden group-hover:block"
+              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white-500 z-10 hidden group-hover:block"
             >
               <svg
                 class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0"
@@ -202,7 +204,7 @@
               <span class="firstlevel">Messaggi privati</span>
             </a>
             <ul
-              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-black-500 z-10 hidden group-hover:block"
+              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white-500 z-10 hidden group-hover:block"
             >
               <svg
                 class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0"
@@ -257,7 +259,7 @@
               <span class="firstlevel">Utenti</span>
             </a>
             <ul
-              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-black-500 z-10 hidden group-hover:block"
+              class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white-500 z-10 hidden group-hover:block"
             >
               <svg
                 class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0"
@@ -295,13 +297,13 @@
       <div class="mr-20 absolute right-0 hidden xl:flex">
         <div class="flex" v-if="!user">
           <div
-            class="px-4 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center transition-all duration-300"
+            class="px-4 border-white-100 border-solid border-2 rounded-md bg-white-500 cursor-pointer hover:bg-white-900 flex justify-center items-center transition-all duration-300"
             @click.prevent="showModalRegister"
           >
             Sign Up
           </div>
           <div
-            class="px-4 mx-2 border-black-100 border-solid border-2 rounded-md bg-black-500 cursor-pointer hover:bg-black-900 flex justify-center items-center transition-all duration-300"
+            class="px-4 mx-2 border-white-100 border-solid border-2 rounded-md bg-white-500 cursor-pointer hover:bg-white-900 flex justify-center items-center transition-all duration-300"
             @click.prevent="showModalLogin"
           >
             Sign In
@@ -310,12 +312,12 @@
         <div
           v-else
           @click.prevent="showMenuProfile = !showMenuProfile"
-          class="p-3 bg-black-500 mr-4 rounded-lg cursor-pointer relative"
+          class="p-3 bg-white-500 mr-4 rounded-lg cursor-pointer relative"
         >
           {{ user.name }}
           <div
             v-show="showMenuProfile"
-            class="absolute bg-black-500 p-2 w-40 right-0 rounded-md hover:text-green-550"
+            class="absolute bg-white-500 p-2 w-40 right-0 rounded-md hover:text-green-550"
             style="top: 50px"
           >
             <ul class="w-full flex justify-center">
@@ -328,7 +330,7 @@
           @click="$refs.modalCart.setShowModal(true)"
         >
           <span
-            class="bg-black-900 hover:opacity-75 p-2 rounded-sm flex justify-center items-center px-4 transition-all duration-300"
+            class="bg-white-900 hover:opacity-75 p-2 rounded-sm flex justify-center items-center px-4 transition-all duration-300"
           >
             <svg
               fill="none"
@@ -353,7 +355,7 @@
     <registerModal ref="modalRegister" />
     <transition name="left-to">
       <div
-        class="absolute w-full h-screen bg-black-500 inset-0"
+        class="absolute w-full h-screen bg-white-500 inset-0"
         v-show="showMenuOnMobile"
       >
         <div

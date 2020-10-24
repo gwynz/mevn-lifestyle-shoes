@@ -1,7 +1,14 @@
 <template>
   <transition name="right-to">
-    <div v-if="isShow" class="fixed inset-0 z-20 bg-opacity-600" @click="isShow=false">
-      <div @click.stop class="absolute inset-0 left-auto w-3/12 bg-black-900 z-40 opacity-100">
+    <div
+      v-if="isShow"
+      class="fixed inset-0 z-20 bg-opacity-600"
+      @click="isShow = false"
+    >
+      <div
+        @click.stop
+        class="absolute inset-0 left-auto w-3/12 bg-white-700 z-40 opacity-100"
+      >
         <div class="px-16 py-24">
           <div class="flex items-center justify-between">
             <h3 class="text-xl uppercase font-bold">Register</h3>
@@ -26,7 +33,8 @@
                 <label
                   class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                   for="inline-full-name"
-                >Full Name</label>
+                  >Full Name</label
+                >
               </div>
               <div class="md:w-2/3">
                 <input
@@ -43,7 +51,8 @@
                 <label
                   class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                   for="inline-full-name"
-                >Email</label>
+                  >Email</label
+                >
               </div>
               <div class="md:w-2/3">
                 <input
@@ -59,7 +68,8 @@
                 <label
                   class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                   for="inline-password"
-                >Password</label>
+                  >Password</label
+                >
               </div>
               <div class="md:w-2/3">
                 <input
@@ -82,9 +92,13 @@
                 class="shadow bg-gradient-green hover:bg-green-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                 type="button"
                 @click="register"
-              >Sign Up</button>
+              >
+                Sign Up
+              </button>
             </div>
-            <div class="m-4 mx-auto md:flex md:items-center mb-6 text-red-600">{{error}}</div>
+            <div class="m-4 mx-auto md:flex md:items-center mb-6 text-red-600">
+              {{ error }}
+            </div>
           </form>
         </div>
       </div>

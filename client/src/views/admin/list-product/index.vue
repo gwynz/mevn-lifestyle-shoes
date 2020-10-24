@@ -8,7 +8,7 @@
         <div class="my-5">
           <router-link
             to="/admin/product"
-            class="uppercase px-4 py-2 bg-black-100"
+            class="uppercase px-4 py-2 bg-white-700"
             >new</router-link
           >
         </div>
@@ -105,18 +105,32 @@
                   >
                     Status
                   </th>
+                  <th
+                    class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                  >
+                    Action
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="(item, index) in listProduct" :key="index">
                   <td class="px-5 py-5 border-b border-gray-200 text-sm">
                     <div class="flex items-center">
-                      <div class="flex-shrink-0 w-10 h-10">
+                      <div
+                        class="flex-shrink-0 w-64 h-40 pr-4 rounded-sm overflow-hidden bg-white-700"
+                      >
                         <img
-                          class="w-full h-full rounded-full"
-                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80"
+                          v-if="item.images.length"
+                          class="w-full h-full object-contain"
+                          :src="item.images[0].url"
                           alt=""
                         />
+                        <div
+                          v-else
+                          class="w-full h-full flex justify-center items-center"
+                        >
+                          No image
+                        </div>
                       </div>
                       <div class="ml-3">
                         <p class="text-gray-900 whitespace-no-wrap">
@@ -149,11 +163,21 @@
                       >
                     </span>
                   </td>
+                  <td class="px-5 py-5 border-b border-gray-200 text-sm">
+                    <v-btn depressed color="error" @click="remove(item._id)">
+                      Delete
+                    </v-btn>
+                  </td>
                 </tr>
               </tbody>
             </table>
-
-            <pagination :totalPages="9" :total="4" :currentPage="6" />
+            <v-pagination
+              v-model="pagnation.currentPage"
+              :length="pagnation.totalPages"
+              :total-visible="7"
+              @input="getData"
+              class="mb-4"
+            ></v-pagination>
           </div>
         </div>
       </div>
